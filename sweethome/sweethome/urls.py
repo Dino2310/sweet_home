@@ -21,7 +21,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include(("controller.urls", "controller"), namespace = 'controller'))
+    path("", include(("controller.urls", "controller"), namespace = 'controller')),
+    path('pharmacy', include(("first_aid_kit.urls", "first_aid_kit"), namespace = 'first_aid_kit' )),
+    path("photo", include(("photo.urls", 'photo'), namespace="photo")),
 ]
 
 urlpatterns += static(

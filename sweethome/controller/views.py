@@ -5,6 +5,10 @@ from .forms import *
 from .utils import *
 from .settings_ligth import *
 from django_ajax.decorators import ajax
+from environs import Env
+import os
+
+env: Env = Env()
 
 off = "rgb(125, 125, 125)"
 on = "rgb(255, 255, 0)"

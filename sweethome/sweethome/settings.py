@@ -17,6 +17,7 @@ from environs import Env
 env: Env = Env()
 env.read_env()
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 SETTINGS_PATH = os.path.realpath(os.path.dirname(__file__))
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'controller',
     'django_ajax',
+    'first_aid_kit',
+    "photo"
 ]
 
 MIDDLEWARE = [
