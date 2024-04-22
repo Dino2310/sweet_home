@@ -1,0 +1,114 @@
+a.choice:active, a.choice:hover,a.choice {
+  text-decoration: none;
+  color: #666;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    background-color: antiquewhite;
+    height: 10vh;
+    position: relative;
+}
+
+.choices{
+    position: absolute ;
+    left: 50px;
+    bottom: 0;
+    height: 35px;
+    width: 50vh;
+
+}
+.choice{
+    float: left;
+    display: flex;
+    background-color: aqua;
+    margin-left: 10px ;
+    height: 100%;
+    width: 100px;
+    border-radius: 5px 5px 10px 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.apartment{
+    position: absolute ;
+}
+.luminaire{
+    border-radius: 50%;
+    border: 2px solid black;
+    display: block;
+    position: absolute;
+    
+}
+#L1_kitchen{
+    top : 12vh;
+    left: 72vh;
+    height: 8vh;
+    width: 8vh;
+}
+#L2_kitchen{
+    top : 21vh;
+    left: 105vh;
+    height: 8vh;
+    width: 8vh;
+}
+
+#grup_hall{
+    position: absolute;
+    top : 50vh;
+    left: 4vh;
+    height: 5vh;
+    width: 71vh;
+    display: flex;
+    justify-content: space-around;
+}
+.spot_lamp{
+    position:static;
+    height: 5vh;
+    width: 5vh;
+}
+
+#grup_wardrobe{
+    position: absolute;
+    flex-direction: column;
+    top : 7vh;
+    left: 52vh;
+    height: 31vh;
+    width: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#L_bedroom{
+    top : 21vh;
+    left: 22vh;
+    height: 12vh;
+    width: 12vh;
+}
+
+#bedside_lamp_left{
+    top : 5vh;
+    left: 34vh;
+    height: 6vh;
+    width: 6vh;
+}
+#bedside_lamp_right{
+    top : 5vh;
+    left: 17vh;
+    height: 6vh;
+    width: 6vh;
+}
+
+#grup_wc{
+    position: absolute;
+    top : 47vh;
+    left: 77vh;
+    height: 5vh;
+    width: 45vh;
+    display: flex;
+    justify-content: space-around;
+}

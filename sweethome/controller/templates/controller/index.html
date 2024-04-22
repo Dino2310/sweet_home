@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contetnt %}
+<div>
+    <div class = "apartment">
+        <img src="{% static 'plan_apartment.jpg' %}" alt="" style="height: 80%; width: 80%; margin: 25px;">
+
+
+        <div id="L1_kitchen"  style= "background-color: {{L1_kitchen}}" class = " luminaire" onclick="lamp_switch('L1_kitchen')"></div>
+        <div id="L2_kitchen" style= "background-color: {{L2_kitchen}};" class = " luminaire" onclick="lamp_switch('L2_kitchen')"></div>
+        <div id="L_bedroom" style= "background-color: {{L_bedroom}};" class = " luminaire" onclick="lamp_switch('L_bedroom')"></div>
+        <div id="bedside_lamp_right" style= "background-color: {{bedside_lamp_right}} ;" class = " luminaire" onclick="lamp_switch('bedside_lamp_right')"></div>
+        <div id="bedside_lamp_left" style= "background-color: {{bedside_lamp_left}};" class = " luminaire" onclick="lamp_switch('bedside_lamp_left')"></div>
+        <div id = 'grup_hall'  onclick="lamp_switch('grup_hall')">
+            {% for i in hall %}
+            <div class="luminaire spot_lamp" style= "background-color: {{grup_hall}} ;"></div>
+            {% endfor %}
+        </div>
+        <div id = 'grup_wardrobe' onclick="lamp_switch('grup_wardrobe')">
+            {% for i in wardrobe %}
+            <div class="luminaire spot_lamp" style= "background-color: {{grup_wardrobe}} ;"></div>
+            {% endfor %}
+        </div>
+        <div id = 'grup_wc' onclick="lamp_switch('grup_wc')">
+            {% for i in wc %}
+            <div class="luminaire spot_lamp" style= "background-color: {{grup_wc}};"></div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
