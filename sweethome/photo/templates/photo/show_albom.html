@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 {% block contetnt %}
-
+<article class='gallery'>
+    {% for img in images%}
+    <a class='gallery-link' href="{{img.image.url}}">
     
-{% for img in images %}
-<img src="{{ img.image.url }}" alt="" style="width: 50vh; height: 50vh;">
-{% endfor %}
-</div>
+      <figure class='gallery-image'>
+        <img height='1000' src='{{img.image.url}}' width='1000'>
+        <figcaption>{{albom.name}}</figcaption>
+      </figure>
+     
+      </a>
+    {% endfor %}
+  </article>
 {% endblock %}
-<img src="{{ img.image.url }}" alt="" style="width: 50vh; height: 50vh;">
-<h2>{{img.comment}}</h2>
-<div>{{albom.date}}</div>
-<div>{{albom.name}}</div>
-<div>{{albom.text}}</div>
-<div>{{albom.category}}</div>

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django_ajax',
     'first_aid_kit',
     "photo",
+
 ]
 
 MIDDLEWARE = [

@@ -2,22 +2,25 @@
 {% load static %}
 
 {% block contetnt %}
-<article class='gallery'>
+<div>
+  <a href="{% url 'photo:create_albom' %}" >Создать новый альбом</a>
+</div>
+<div >
     {% for albom in alboms %}
-    <a class='gallery-link' href="{% url 'photo:show_albom' albom.id %}">
-        <figure class='gallery-image'>
-          <img height='1000' src='{{albom.photo_set.all.0.image.url}}' width='1000'>
-          <figcaption>{{albom.name}}</figcaption>
-        </figure>
-      </a>
+        <article class='gallery'>
+          <a  href="{% url 'photo:show_albom' albom.id %}">
+            <figure class='gallery-image'>
+              <img height='1000' src='{{albom.photo_set.all.0.image.url}}' width='1000'>
+              <figcaption>{{albom.name}}</figcaption>
+            </figure>
+            </a>
+        </article>
     {% endfor %}
 
-</article>
+  </div>
 
 {% endblock %}
-<div>
-    <a href="{% url 'photo:create_albom' %}" >Создать новый альбом</a>
-</div>
+
 
 {% for albom in alboms %}
 <a href="{% url 'photo:show_albom' albom.id %}" >

@@ -14,7 +14,6 @@ def photos(request):
         alboms =Albom.objects.filter(category = request.GET.get("cat"))
     else:
         alboms = Albom.objects.all()
-
     return render(request, 'photo/albom.html',{'alboms':alboms})
 
 def create_albom(request):
@@ -50,7 +49,6 @@ def show(request, id):
     obj = Albom.objects.get(id = id)
     images = Photo.objects.filter(albom = obj).order_by("order")
     
-    print(slider)
     return render(request, 'photo/show_albom.html',{'albom':obj, "images":images})
 
 @ajax
