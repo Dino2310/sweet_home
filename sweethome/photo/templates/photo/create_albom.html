@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contetnt %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+   
+    <div>{{form.name}}</div>
+    <div>{{form.text}}</div>
+    <div>{{form.date}}</div>
+    <div>{{form.category}}</div>
+  
+    <input type="file" name="images" multiple>
+    <button>Готово</button>
+</form>
+{% endblock %}

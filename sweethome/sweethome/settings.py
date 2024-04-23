@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'controller',
     'django_ajax',
     'first_aid_kit',
-    "photo"
+    "photo",
 ]
 
 MIDDLEWARE = [
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'sweethome.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/controller/index.html'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

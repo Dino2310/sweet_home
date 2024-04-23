@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contetnt %}
+
+    
+{% for img in images %}
+<img src="{{ img.image.url }}" alt="" style="width: 50vh; height: 50vh;">
+{% endfor %}
+</div>
+{% endblock %}
+<img src="{{ img.image.url }}" alt="" style="width: 50vh; height: 50vh;">
+<h2>{{img.comment}}</h2>
+<div>{{albom.date}}</div>
+<div>{{albom.name}}</div>
+<div>{{albom.text}}</div>
+<div>{{albom.category}}</div>

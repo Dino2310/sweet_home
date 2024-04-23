@@ -11,13 +11,15 @@ class ImageForm(forms.ModelForm):
 
 class AlbomForm(forms.ModelForm):
     name = forms.CharField(widget=forms.TextInput(
-        attrs={"class":"input", 'plaseholder':"Название альбома"}
+        attrs={"class":"input", 'placeholder':"Название альбома"}
     ))
-    text = forms.CharField(widget=forms.CharField(
-        attrs={"class":"input", 'plaseholder':"Описание альбома"}
+    text = forms.CharField(widget=forms.TextInput(
+        attrs={"class":"input", 'placeholder':"Описание альбома"}
     ))
-    date = forms.DateField()
-    category = forms.ChoiceField()
+    date = forms.DateField(widget=forms.TextInput(
+        attrs={"type":"date"}
+    ))
+    category = forms.ChoiceField(choices=CATEGORIS)
 
     class Meta:
         fields = ["name", "text", "date", "category"]

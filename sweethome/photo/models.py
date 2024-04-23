@@ -2,17 +2,18 @@ from django.db import models
 
 
 CATEGORIS= [
+    ("all", "Все"),
     ("voyge","Путишествия"),
     ("famaly","Семья"),
     ("party","Мероприятия"),
     ("birthday","Дни рождания"),
-    ("all", "Все")
+    
 ]
 class Albom(models.Model):
     name = models.CharField(max_length=255)
     text = models.TextField()
     date = models.DateField()
-    category = models.CharField(max_length=255, choices=CATEGORIS, default= CATEGORIS[-1][0])
+    category = models.CharField(max_length=255, choices=CATEGORIS, default= CATEGORIS[0][0])
 
 class Photo(models.Model):
     order = models.IntegerField(default=0)

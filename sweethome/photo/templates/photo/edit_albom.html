@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contetnt %}
+{% for i in images %}
+<div>
+    <button onclick="photo_del({{i.id}})"></button>
+    <img src="{{i.image.url}}" alt="" style="width: 50vh; height: 50vh;">
+    <input type="text" value="{{i.comment}}">
+    <h2>{{i.id}}</h2>
+</div>
+{% endfor %}
+
+
+<div>{{alb.date}}</div>
+<div>{{alb.name}}</div>
+<div>{{alb.text}}</div>
+<div>{{alb.category}}</div>
+
+
+
+{% endblock %}
